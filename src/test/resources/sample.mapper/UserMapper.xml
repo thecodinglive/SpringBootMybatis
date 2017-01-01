@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample.mapper.UserMapper">
+<!--
+    <resultMap id="userResult" type="User">
+        <result property="uid" column="uid"/>
+        <result property=""
+    </resultMap>
+    -->
+    <select id="getCurrentDateTime" resultType="String">
+        SELECT NOW()
+    </select>
+
+    <insert id="addUserInfo" >
+        insert into user(uid,uname, email)
+        values(#{uid},#{uname}, #{email})
+    </insert>
+</mapper>
